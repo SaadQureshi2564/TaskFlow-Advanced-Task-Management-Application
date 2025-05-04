@@ -45,7 +45,7 @@ export default function TeamsPage() {
         ...teamData,
         createdBy: '1', // Mocked user ID
         members: teamData.members || [],
-      } as any);
+      } as Omit<Team, 'id' | 'createdAt' | 'updatedAt'>);
     }
     setIsModalOpen(false);
   };
